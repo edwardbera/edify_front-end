@@ -4,8 +4,8 @@ import Style from '../css/main.css';
 import axios from "axios";
 import bcrypt from "bcryptjs";
 import { link } from 'react-router-dom';
-const lurl = "http://localhost:8000/login";
-const curl = "http://localhost:8000/createUser";
+const lurl = process.env.REACT_APP_login;
+const curl = process.env.REACT_APP_CREATEUSER;
 const salt = bcrypt.genSaltSync(10);
 
 
