@@ -11,7 +11,7 @@ import TopBar from '../components/TopBar';
 export default function Upload(){
     const Navigate = useNavigate();
     const { getRootProps, getInputProps, acceptedFiles } = useDropzone({});
-    const uri = 'http://localhost:8000/upload';
+    const uri = process.env.REACT_APP_UPLOAD;
     const [data, setData] = useState({});
     const [artwork, setArtwork] = useState(null);
     const [audio, setAudio] = useState(null)
