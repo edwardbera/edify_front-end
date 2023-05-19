@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Card from '../components/SingleCard';
 import axios, { all } from "axios";
 import AlbumCard from '../components/AlbumCard';
+const uri = process.env.GETALBUMS;
 
 export default function ContentArea( props){
     const Navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function ContentArea( props){
    //Server request to retrieve singles from DB 
     async function getSingles(){
         
-        await axios.get('http://localhost:8000/getAlbums', {
+        await axios.get(uri, {
         }, )
         .then((response)=>{
            
@@ -51,7 +52,7 @@ export default function ContentArea( props){
     //Server request to retrieve Albums from DB 
     async function getAlbums(){
         //console.log('getting playlists')
-        await axios.get('http://localhost:8000/getAlbums', {
+        await axios.get(uri, {
         }, )
         .then((response)=>{
            
