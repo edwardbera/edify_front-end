@@ -15,7 +15,7 @@ export default function ContentArea( props){
     
     //Prop setting the current playing tract
     props.selUrl(current);
-    console.log("url is :", uri)
+    
     //Function to set the current playing tract
     const curl = (current) => {
         setCurrent(current);
@@ -23,7 +23,7 @@ export default function ContentArea( props){
 
    //Server request to retrieve singles from DB 
     async function getSingles(){
-        
+        console.log(uri)
         await axios.get(uri, {
         }, )
         .then((response)=>{
