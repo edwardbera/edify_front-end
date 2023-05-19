@@ -15,7 +15,7 @@ export default function ContentArea( props){
     
     //Prop setting the current playing tract
     props.selUrl(current);
-
+    console.log(uri)
     //Function to set the current playing tract
     const curl = (current) => {
         setCurrent(current);
