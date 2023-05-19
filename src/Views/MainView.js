@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Card from '../components/SingleCard';
 import axios, { all } from "axios";
 import AlbumCard from '../components/AlbumCard';
-const uri = process.env.GETALBUMS;
+const uri = process.env.REACT_APP_GETALBUMS;
 
 export default function ContentArea( props){
     const Navigate = useNavigate();
