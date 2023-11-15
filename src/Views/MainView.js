@@ -1,7 +1,7 @@
 import React, { Component, useEffect, Suspense } from 'react';
 import Style from '../css/main.css';
 import {Link, useNavigate} from 'react-router-dom';
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight, faNavicon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Card from '../components/SingleCard';
 import axios, { all } from "axios";
@@ -12,7 +12,7 @@ export default function ContentArea( props){
     const Navigate = useNavigate();
     const [current, setCurrent] = React.useState('');
     const [albums, setAlbums] = React.useState([]);
-    
+  
     //Prop setting the current playing tract
     props.selUrl(current);
 
@@ -89,7 +89,7 @@ export default function ContentArea( props){
         //If statement to Change View based on Linked Clicked in the sidebar
     
     
-
+  
 
     useEffect(() => {
        
@@ -123,7 +123,7 @@ export default function ContentArea( props){
             
                  {/* Main area where media will be displayed */}
                  <div className='header-wrapper'>
-                 <h1 id='header'  className='view_name'  > {props.view}</h1>
+                           <h1 id='header'  className='view_name'  > {props.view}</h1>
 <div className='header-text'>
 <h2 className='header_title'>LORD EDWARD</h2>
                  <p>The fresh Prince of R&B</p>

@@ -69,23 +69,23 @@ export default function BottomBar(props){
             </div>
             {/** Media Control Buttons */}
             <div className='controls'>
-            <div className='control_button'>
+            <div className='control_button' id ='shuffle-button'>
 
-                <p name ="shuffle-button" ><FontAwesomeIcon icon={faShuffle}   /></p>
+                <p name ="shuffle-button" className='shuffle-button' ><FontAwesomeIcon icon={faShuffle}   /></p>
                 </div>
-            <div className='control_button'>
+            <div className='control_button' id ='backward-button'>
 
                 <p name ="backward-button" ><FontAwesomeIcon icon={faBackward}  /></p>
                 </div>
-                <button name ="play-button" onClick={handlePlay} className='control_button'>
+                <button name ="play-button" id ='play-button' onClick={handlePlay} className='control_button'>
                 <audio name ="audio-player" onTimeUpdate={updateDuration} onPlay = {handleChange} id='audioplayer' src ={props.audio.url} controls autoPlay hidden />
                 <p><FontAwesomeIcon icon={playState}  /></p> 
                 </button>
-                <div className='control_button'>
+                <div className='control_button' id ='forward-button'>
 
                 <p name ="forward-button"><FontAwesomeIcon icon={faForward}  /></p>
                 </div>
-                <div className='control_button'>
+                <div className='control_button' id ='repeat-button'>
 
                 <p name ="repeat-button"><FontAwesomeIcon icon={faRepeat}  /></p>
                 </div>

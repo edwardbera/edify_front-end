@@ -8,13 +8,36 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import ContentArea from '../Views/MainView';
 import { NavLink } from 'react-router-dom';
 import Upload from '../pages/Upload';
+import { faArrowLeft, faArrowRight, faNavicon } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function SideBar(props) {
     
     const [view, setView] = React.useState("Home");
+    const [toggleNav, setToggleNave] = React.useState();
     
     //function to review the view clicked
+    const openNav = () =>{
+        
+        var Navstyle = {
+            marginLeft : "0%"
+        }
+       
+        if (toggleNav.marginLeft === Navstyle.marginLeft){
+                
+                Navstyle = {
+                marginLeft : "-100%"
+            }
+            setToggleNave(Navstyle)
+            }else{
+                 Navstyle = {
+                    marginLeft : "0%"
+                }
+                setToggleNave(Navstyle)
+
+            }
+    }
+    
     function handleView(event){
         
         const sview = event.target;
@@ -27,7 +50,9 @@ export default function SideBar(props) {
     return(
         <Suspense fallback={<Loading />}>
         <div className='wrapper_wrapper'>
-        <div className ='sidebar-containter'>
+        <FontAwesomeIcon className='navicon' icon={faNavicon} onClick={openNav}/>
+         
+        <div className ='sidebar-containter' style={toggleNav}>
             <img className='edify-logo' src='https://i.ibb.co/dr2G5Bn/edify-logo-smal.png' alt='Sidebar Logo'></img>
             <ul className='sidebar-menu'>
                 <li onClick={handleView} name = "Home"><span><FontAwesomeIcon  icon={faHome} /></span>Home</li>
