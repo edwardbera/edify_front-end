@@ -504,14 +504,13 @@ height: 84vh;
        position: absolute;
         top: 20px;
         left: 70%;
-       
-     
     }
 
     .duration{
         visibility: collapse;
 
     }
+    
    #shuffle-button{
     visibility: collapse;
    }
