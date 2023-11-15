@@ -1,7 +1,11 @@
-# Getting Started with Edify
+# Getting Started with Lord Edward's Music Portifolio Site
 
-This project was created using React JS
+This project was created using :
+- React JS for the Front End
+- Express for the Back-end
+- MongoDB Database
+- AWS S3 Bucket Storage
 
-## About Edify
+## About
 
-Edify is a music streaming site that allows users to post their audio and listen to audio.
+The site a portfolio music streaming site that allows users to stream my Lord Edward's music.
