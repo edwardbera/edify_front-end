@@ -78,7 +78,7 @@
 
 .bottom-bar{
     position: absolute;
-    height: 18vh;
+    height: 15vh;
     width: 100vw;
     background-color: #212121;
     border-top: 0.05px solid #b3b3b3 ;
@@ -94,6 +94,7 @@
     margin-left: -65vw ;
     color: #fff;
 }
+
 .bottom-bar .volume_control{
     position: absolute;
        display: flex;
@@ -101,6 +102,7 @@
        align-self: center;
        margin-right: -70vw;
     }
+
     .bottom-bar .title .duration{
         position: absolute;
         margin-left: 10px;
@@ -110,12 +112,18 @@
     .bottom-bar .title .slider{
         width: 28vw;
     }
+
 .wrapper_wrapper{
     display: flex;
-
+  
 }
+
+.sidebar-containter{
+height: 84vh;
+}
+
 .sidebar-containter img{
-    width: 60%;
+    width: 50%;
     padding: 20px;
     
 }
@@ -124,9 +132,11 @@
     list-style: none;
     line-height: 40px;
 }
+
 .sidebar-menu li span{
     margin-right: 1rem;
 }
+
 .side-bar-link{
    
     text-decoration: none;
@@ -145,57 +155,16 @@
 }
 
 .view_name{
-
-    margin-top: 0;
-    color:white;
-    font-size: 1.5rem;
+    margin-left : 10px;
+    margin-top: 10px;
+    color:rgb(128, 128, 128);
+    font-size: 1rem;
     font-weight:bolder;
-}
-.top-nav{
-    
-    background-color: none;
-    height: 2.5vw;
-    display: flex;
-
-    
-    color: #fff;
-    margin: 0;
-    
-
-}
-
-.top-nav .arrowicon{
-        width: 10px;
-       margin-left: 0.5rem;
-       margin-top: auto;
-       
-
-}
-
-.top-nav .nav-arrows{
-   
-    margin-left: 15px ;
-    align-self: center;
-
-}
-.top-nav .nav-links{
-    display: flex;
-    gap: 10px;
-    list-style: none;
-    justify-self: center;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.top-nav .loggeduser{
-    
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 .content-wrapper .content{
     color: #fff;
-    padding: 20px;
+  
 }
 
 .card{
@@ -237,6 +206,32 @@
     height: auto;
 }
 
+.AboutCard{
+    background-color:#363535;
+    width: 900px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.AboutCard p{
+    width: 400px ;
+    font-size: 18px;
+}
+
+.about-image{
+    display: flex;
+    width: 450px ;
+    image-rendering: optimizeSpeed;
+}
+
+
 .controls{
     margin: auto;
     display: flex;
@@ -257,21 +252,56 @@
 
 }
 
+.videos{
+    display: flex;
+    gap: 30px;
+}
 .content-scroll{
     display: flex;
     flex-direction: row;
     overflow-y: scroll;
     flex-wrap: wrap;
     align-items: center;
-   
+    margin-top: 10px;
+    margin-left: 10px;
     gap: 1.5rem;
-    height: 68vh;
-    width: 77vw;
+    height: 50vh;
+    width: 79vw;
 }
 
 .content{
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-wrapper{
+    background-color: #363535;
+    width: 80vw;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-image{
+    height: auto;
+    margin-right: 150px;
+}
+.header-text{
+    margin-right: 200px;
+}
+
+.header_title{
+    margin-top: 100px;
+    font-size: 50px;
+    font-style: italic;
+}
+.header-text p{
+    font-style: italic;
+    font-weight:lighter;
+    font-size: 18px;
+    color: #b3b3b3;
 }
 
 .upload-wrapper{
@@ -285,7 +315,6 @@
 
   
 }
-
 
 .file-item{
     list-style: none;
@@ -315,6 +344,7 @@
     border-radius: 20px;
     text-align: center;
 }
+
 .uploadForm Button{
     width: 7rem;
     height: 2rem;
@@ -323,6 +353,7 @@
 .uploadForm .fileInput{
     width: 20rem;
 }
+
 .TopBar{
     width: 100vw;
     height: 6vh;
@@ -331,10 +362,10 @@
     grid-template-columns: 1fr 3fr 1fr ;
 }
 
-.spotify-logo-top-bar{
+.edify-logo{
+  
     margin-left: 1rem;
-    width: 6rem;
-
+    
 }
 
 .topbar-nav{
@@ -356,3 +387,44 @@
     text-decoration: none;
     color: #fff;
 }
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    body{
+        visibility: hidden;
+        height: 0px;
+    }
+    
+    .sidebar-containter{
+        visibility: hidden;
+    }
+
+    .main-container{
+     visibility: hidden;   
+    }
+
+    .bottom-bar .title {
+       position: absolute;
+        top: 0;
+        left: 8%;
+        background-color: #b3b3b3;
+     
+    }
+    
+    .bottom-bar .title .slider{
+        position: absolute;
+        margin-top: 0;
+        width: 800vw;
+
+    }
+
+    .volume_control{
+        visibility: hidden;
+    }
+
+    .volume-slider{
+        visibility: hidden;
+    }
+  }

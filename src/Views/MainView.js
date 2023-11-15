@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Card from '../components/SingleCard';
 import axios, { all } from "axios";
 import AlbumCard from '../components/AlbumCard';
+import AboutCard from '../components/AboutCard';
 
 export default function ContentArea( props){
     const Navigate = useNavigate();
@@ -23,7 +24,7 @@ export default function ContentArea( props){
    //Server request to retrieve singles from DB 
     async function getSingles(){
         
-        await axios.get('http://localhost:8000/getAlbums', {
+        await axios.get('https://edify-back-end.onrender.com/getAlbums', {
         }, )
         .then((response)=>{
            
@@ -51,7 +52,7 @@ export default function ContentArea( props){
     //Server request to retrieve Albums from DB 
     async function getAlbums(){
         //console.log('getting playlists')
-        await axios.get('http://localhost:8000/getAlbums', {
+        await axios.get('https://edify-back-end.onrender.com/getAlbums', {
         }, )
         .then((response)=>{
            
@@ -86,20 +87,21 @@ export default function ContentArea( props){
     } 
 
         //If statement to Change View based on Linked Clicked in the sidebar
+    
+    
+
+
+    useEffect(() => {
+       
         if (props.view === "Home"){
- 
-            
             getSingles()
     
         } else if (props.view === "Albums"){
             
            getAlbums()
+        } else if (props.view === "About"){
+            setAlbums(<AboutCard/>)
         }
-
-
-    useEffect(() => {
-       
-    
        
  
     },[props.view]);
@@ -110,10 +112,7 @@ export default function ContentArea( props){
         <div className='content-wrapper'>
            {/* Top Navigation area */}
             <div className='top-nav'>
-                <div className='nav-arrows'>
-                <FontAwesomeIcon className='arrowicon' icon={faArrowLeft } />
-                <FontAwesomeIcon className='arrowicon' icon={faArrowRight } />
-                </div>
+                
                
                 <div className='loggeduser'></div>
                 
@@ -121,12 +120,31 @@ export default function ContentArea( props){
 
             <div className='content'>
                  {/* Heading Showing the current View */}
-                <h1 id='header'  className='view_name'  > {props.view}</h1>
+            
                  {/* Main area where media will be displayed */}
-                <div className='content-scroll'>
-                    
+                 <div className='header-wrapper'>
+                 <h1 id='header'  className='view_name'  > {props.view}</h1>
+<div className='header-text'>
+<h2 className='header_title'>LORD EDWARD</h2>
+                 <p>The fresh Prince of R&B</p>
+</div>
+
                  
-                {albums}
+                 <img className='header-image' src="https://i.ibb.co/pQ3dnzc/IMG-2499.png" alt="header" />
+                 
+                 </div>
+                 
+                              <div className='content-scroll'>
+                                {
+                                    props.view === "Home" ?
+                                        <div className='videos'>
+                                        <iframe width="350" height="195" src="https://www.youtube.com/embed/tICaBbCPQr4?si=gn7iuJ2HJsQY8qM5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe width="350" height="195" src="https://www.youtube.com/embed/6PYkvQXMGZY?si=Bj9BUjugozLjv_nR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                         <iframe width="350" height="195"src="https://www.youtube.com/embed/Rzq-WlAAfCE?si=kmlkMqsRWliVqU2V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        </div>
+                                        : ''
+                                }
+                                 { albums}       
                
                 </div>
                
