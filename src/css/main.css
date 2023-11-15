@@ -396,6 +396,7 @@ height: 84vh;
 @media only screen and (max-width: 600px) {
     
     .navicon{
+        visibility: visible;
         margin-top: 15px;
         z-index: 3;
         position: fixed;
