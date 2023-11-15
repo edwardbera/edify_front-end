@@ -15,7 +15,7 @@ export default function ContentArea( props){
   
     //Prop setting the current playing tract
     props.selUrl(current);
-
+    
     //Function to set the current playing tract
     const curl = (current) => {
         setCurrent(current);
@@ -24,7 +24,7 @@ export default function ContentArea( props){
    //Server request to retrieve singles from DB 
     async function getSingles(){
         
-        await axios.get('https://edify-back-end.onrender.com/getAlbums', {
+        await axios.get('http://localhost:8000/getAlbums', {
         }, )
         .then((response)=>{
            
@@ -52,7 +52,7 @@ export default function ContentArea( props){
     //Server request to retrieve Albums from DB 
     async function getAlbums(){
         //console.log('getting playlists')
-        await axios.get('https://edify-back-end.onrender.com/getAlbums', {
+        await axios.get('http://localhost:8000/getAlbums', {
         }, )
         .then((response)=>{
            

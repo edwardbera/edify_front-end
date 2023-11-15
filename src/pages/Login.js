@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom';
 import Style from '../css/main.css';
 import axios from "axios";
 import bcrypt from "bcryptjs";
-const lurl = "https://edify-back-end.onrender.com/login";
+const lurl = "http://localhost:8000/login";
 const salt = bcrypt.genSaltSync(10);
 
 
