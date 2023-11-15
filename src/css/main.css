@@ -482,7 +482,6 @@ height: 84vh;
         height: 50vh;
         width: 100vw;
         margin-left: 0px;
-   
     }
 
     .sidebar-containter{
@@ -510,7 +509,7 @@ height: 84vh;
         visibility: collapse;
 
     }
-    
+
    #shuffle-button{
     visibility: collapse;
    }
