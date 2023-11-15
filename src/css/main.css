@@ -275,15 +275,22 @@ height: 84vh;
     display: flex;
     flex-direction: column;
 }
+.header-wrapper{
+    background-color: #363535;
+    width: 80vw;
+    height: 200px;
+    display: flex;
 
-
+ 
+}
 
 .header-image{
     height: auto;
-    margin-right: 150px;
+  
 }
 .header-text{
     margin-right: 200px;
+    margin-left: 100px;
 }
 
 .header_title{
@@ -381,7 +388,9 @@ height: 84vh;
     text-decoration: none;
     color: #fff;
 }
-
+.navicon{
+    visibility: collapse;
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -541,4 +550,5 @@ height: 84vh;
     .volume-slider{
         visibility: hidden;
     }
+
   }
